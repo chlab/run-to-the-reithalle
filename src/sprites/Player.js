@@ -1,5 +1,5 @@
 import Phaser from 'phaser'
-import config from '../config'
+// import config from '../config'
 
 export default class extends Phaser.Sprite {
   constructor ({ game, x, y, asset }) {
@@ -11,8 +11,8 @@ export default class extends Phaser.Sprite {
 
   enable() {
     this.game.physics.arcade.enable(this)
-    this.body.gravity.y = 2500
-    this.body.velocity.x = config.player.speed
+    // this.body.gravity.y = 2500
+    this.body.velocity.x = 70
     this.animations.play('walk', 15, true)
   }
 

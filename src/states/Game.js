@@ -16,13 +16,13 @@ export default class extends Phaser.State {
     banner.anchor.setTo(0.5)
 
     this.game.stage.backgroundColor = '#222222'
-    this.map = this.game.add.tilemap('platform')
-    this.map.addTilesetImage('platformer_tiles', 'tiles')
+    // this.map = this.game.add.tilemap('platform')
+    // this.map.addTilesetImage('platformer_tiles', 'tiles')
 
-    this.backgroundLayer = this.map.createLayer('layer_1')
+    // this.backgroundLayer = this.map.createLayer('layer_1')
     // this.blockedLayer = this.map.createLayer('blockedLayer')
     // this.map.setCollisionBetween(1, 200000, true, 'blockedLayer', true)
-    this.backgroundLayer.resizeWorld()
+    // this.backgroundLayer.resizeWorld()
 
     // define game keys
     this.game.keys = this.keys = this.game.input.keyboard.addKeys({
