@@ -1,0 +1,36 @@
+{"frames": [
+
+{
+	"filename": "erich.png",
+	"frame": {"x":0,"y":0,"w":60,"h":64},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":60,"h":64},
+	"sourceSize": {"w":60,"h":64}
+},
+{
+	"filename": "loader-bg.png",
+	"frame": {"x":60,"y":0,"w":300,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":300,"h":30},
+	"sourceSize": {"w":300,"h":30}
+},
+{
+	"filename": "police.png",
+	"frame": {"x":360,"y":0,"w":60,"h":60},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":60,"h":60},
+	"sourceSize": {"w":60,"h":60}
+}],
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "rttr.png",
+	"format": "RGBA8888",
+	"size": {"w":420,"h":64},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:cb124f3277c6740c6ca54461fdfe1b4a:149b900e7c6bbb39a1bfcc53e69cb94d:8a481aea1de593b1ad2a0198c969781d$"
+}
+}
