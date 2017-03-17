@@ -1,5 +1,6 @@
 import Phaser from 'phaser'
 import { centerGameObjects } from '../utils'
+import config from '../config'
 
 export default class extends Phaser.State {
   init () {}
@@ -8,6 +9,15 @@ export default class extends Phaser.State {
     this.loaderBg = this.add.sprite(this.game.world.centerX, this.game.world.centerY, 'loaderBg')
     this.loaderBar = this.add.sprite(this.game.world.centerX, this.game.world.centerY, 'loaderBar')
     centerGameObjects([this.loaderBg, this.loaderBar])
+
+    let banner = this.add.text(this.world.centerX, 80, config.title.toUpperCase())
+    banner.font = 'Maven Pro'
+    banner.padding.set(10, 16)
+    banner.fontSize = 40
+    banner.fill = '#000000'
+    banner.smoothed = false
+    banner.anchor.setTo(0.5)
+    this.add.text(banner)
 
     this.load.setPreloadSprite(this.loaderBar)
     //
