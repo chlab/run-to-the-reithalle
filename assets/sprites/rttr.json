@@ -1,8 +1,24 @@
 {"frames": [
 
 {
+	"filename": "anker.png",
+	"frame": {"x":0,"y":94,"w":80,"h":80},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":80,"h":80},
+	"sourceSize": {"w":80,"h":80}
+},
+{
+	"filename": "barrikade.psd",
+	"frame": {"x":240,"y":0,"w":100,"h":62},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":62},
+	"sourceSize": {"w":100,"h":62}
+},
+{
 	"filename": "bundeshaus.png",
-	"frame": {"x":0,"y":0,"w":500,"h":329},
+	"frame": {"x":0,"y":536,"w":500,"h":329},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":500,"h":329},
@@ -10,31 +26,39 @@
 },
 {
 	"filename": "erich.png",
-	"frame": {"x":0,"y":329,"w":60,"h":64},
+	"frame": {"x":370,"y":0,"w":60,"h":64},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":60,"h":64},
 	"sourceSize": {"w":60,"h":64}
 },
 {
-	"filename": "loader-bg.png",
-	"frame": {"x":60,"y":329,"w":300,"h":30},
+	"filename": "floor.jpg",
+	"frame": {"x":110,"y":94,"w":209,"h":83},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":300,"h":30},
-	"sourceSize": {"w":300,"h":30}
+	"spriteSourceSize": {"x":0,"y":0,"w":209,"h":83},
+	"sourceSize": {"w":209,"h":83}
 },
 {
 	"filename": "police.png",
-	"frame": {"x":360,"y":329,"w":60,"h":60},
+	"frame": {"x":0,"y":0,"w":60,"h":60},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":60,"h":60},
 	"sourceSize": {"w":60,"h":60}
 },
 {
+	"filename": "polizeiauto.png",
+	"frame": {"x":90,"y":0,"w":120,"h":62},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":62},
+	"sourceSize": {"w":120,"h":62}
+},
+{
 	"filename": "reithalle.png",
-	"frame": {"x":0,"y":393,"w":498,"h":299},
+	"frame": {"x":0,"y":207,"w":498,"h":299},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":498,"h":299},
@@ -47,6 +71,6 @@
 	"format": "RGBA8888",
 	"size": {"w":512,"h":1024},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:b2255fcc839f57912dc5fa1b441e108e:be01fcfa8a0653df32cdf5e7aa30609d:8a481aea1de593b1ad2a0198c969781d$"
+	"smartupdate": "$TexturePacker:SmartUpdate:9372b5d1ff573a48b21a79461fb3b482:8823039e07c8ff57fd8f914aac493fef:8a481aea1de593b1ad2a0198c969781d$"
 }
 }
