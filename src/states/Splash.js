@@ -16,8 +16,8 @@ export default class extends Phaser.State {
     this.load.spritesheet('player', './assets/sprites/punk_run.png', 256, 256, 8)
 
     // map
-    this.load.tilemap('map', './assets/tilemaps/level1.json', null, Phaser.Tilemap.TILED_JSON)
-    this.load.image('tiles', './assets/tiles/level1.png')
+    this.load.tilemap('map', './assets/tilemaps/demo.json', null, Phaser.Tilemap.TILED_JSON)
+    this.load.image('tiles', './assets/sprites/tiles_spritesheet.png')
   }
 
   create () {

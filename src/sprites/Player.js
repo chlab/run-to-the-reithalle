@@ -1,5 +1,4 @@
 import Phaser from 'phaser'
-// import config from '../config'
 
 export default class extends Phaser.Sprite {
   constructor ({ game, x, y, asset }) {
@@ -9,13 +8,25 @@ export default class extends Phaser.Sprite {
     this.animations.add('walk')
   }
 
+  /**
+   * Setup player physics and animations
+   */
   enable() {
     this.game.physics.arcade.enable(this)
-    // this.body.gravity.y = 2500
-    this.body.velocity.x = 70
+    this.body.gravity.y = 3000
+    this.body.velocity.x = 250
     this.animations.play('walk', 15, true)
   }
 
   update () {
+  }
+
+  /**
+   * Player jump
+   */
+  jump() {
+    if (this.body.blocked.down) {
+      this.body.velocity.y -= 900
+    }
   }
 }

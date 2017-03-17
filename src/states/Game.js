@@ -6,32 +6,23 @@ export default class extends Phaser.State {
   preload () {}
 
   create () {
-    const bannerText = 'Run to the Reithalle'
-    let banner = this.add.text(this.world.centerX, 80, bannerText)
-    banner.font = 'Bangers'
-    banner.padding.set(10, 16)
-    banner.fontSize = 40
-    banner.fill = '#77BFA3'
-    banner.smoothed = false
-    banner.anchor.setTo(0.5)
-
     this.game.stage.backgroundColor = '#222222'
-    // this.map = this.game.add.tilemap('platform')
-    // this.map.addTilesetImage('platformer_tiles', 'tiles')
+    this.map = this.game.add.tilemap('map')
+    this.map.addTilesetImage('tiles_spritesheet', 'tiles')
 
-    // this.backgroundLayer = this.map.createLayer('layer_1')
-    // this.blockedLayer = this.map.createLayer('blockedLayer')
-    // this.map.setCollisionBetween(1, 200000, true, 'blockedLayer', true)
-    // this.backgroundLayer.resizeWorld()
+    this.backgroundLayer = this.map.createLayer('backgroundLayer')
+    this.blockedLayer = this.map.createLayer('blockedLayer')
+    this.map.setCollisionBetween(1, 200000, true, 'blockedLayer', true)
+    this.backgroundLayer.resizeWorld()
 
     // define game keys
-    this.game.keys = this.keys = this.game.input.keyboard.addKeys({
+    this.keys = this.game.input.keyboard.addKeys({
       space: Phaser.KeyCode.SPACEBAR,
       right: Phaser.KeyCode.RIGHT
     })
 
     // add player
-    this.player = new Player({ game: this.game, x: 100, y: 300, asset: 'player' })
+    this.player = new Player({ game: this.game, x: 100, y: 100, asset: 'player' })
     setTimeout(() => {
       this.player.enable()
     }, 1000)
@@ -39,8 +30,12 @@ export default class extends Phaser.State {
   }
 
   update () {
-    this.game.physics.arcade.collide(this.player, this.ground)
     this.game.physics.arcade.collide(this.player, this.blockedLayer, this.playerHit, null, this)
+
+    // spacebar: player jump
+    if (this.keys.space.isDown) {
+      this.player.jump()
+    }
   }
 
   render () {
