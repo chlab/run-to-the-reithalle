@@ -8,6 +8,8 @@ var phaser = path.join(phaserModule, 'build/custom/phaser-split.js')
 var pixi = path.join(phaserModule, 'build/custom/pixi.js')
 var p2 = path.join(phaserModule, 'build/custom/p2.js')
 
+var projectRoot = path.resolve(__dirname);
+
 var definePlugin = new webpack.DefinePlugin({
   __DEV__: JSON.stringify(JSON.parse(process.env.BUILD_DEV || 'true'))
 })
@@ -44,7 +46,14 @@ module.exports = {
       { test: /\.js$/, use: ['babel-loader'], include: path.join(__dirname, 'src') },
       { test: /pixi\.js/, use: ['expose-loader?PIXI'] },
       { test: /phaser-split\.js$/, use: ['expose-loader?Phaser'] },
-      { test: /p2\.js/, use: ['expose-loader?p2'] }
+      { test: /p2\.js/, use: ['expose-loader?p2'] },
+      {
+        test: /\.js$/,
+        use: ['eslint-loader'],
+        include: projectRoot,
+        exclude: /node_modules/,
+        enforce: 'pre'
+      }
     ]
   },
   node: {
@@ -52,6 +61,10 @@ module.exports = {
     net: 'empty',
     tls: 'empty'
   },
+  /*eslint: {
+    failOnWarning: false,
+    failOnError: true
+  },*/
   resolve: {
     alias: {
       'phaser': phaser,
