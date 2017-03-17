@@ -1,5 +1,6 @@
 import Phaser from 'phaser'
 import Player from '../sprites/Player'
+import _ from 'lodash'
 
 export default class extends Phaser.State {
   init () {}
@@ -34,12 +35,15 @@ export default class extends Phaser.State {
     })
 
     // add player
-    this.player = new Player({ game: this.game, x: 50, y: 200, asset: 'player' })
+    this.player = new Player({ game: this.game, x: 50, y: 330, asset: 'player' })
     setTimeout(() => {
       this.player.enable()
       this.bgTrack.play()
     }, 1000)
     this.game.camera.follow(this.player)
+
+    // add beers
+    this.createBeers()
   }
 
   update () {
@@ -54,13 +58,22 @@ export default class extends Phaser.State {
   createBeers() {
     this.beers = this.game.add.group()
     this.beers.enableBody = true
-    let result = this.findObjectsByType('beer', this.map, 'objectsLayer')
+    let result = this.findObjectsByType('beer', this.map, 'beers')
 
-    result.forEach((element) => {
-      this.createFromTiledObject(element, this.beers)
+    result.forEach(item => {
+      console.log(item)
+      // this.createFromTiledObject(item, this.beers)
     })
   }
 
-  render () {
+  findObjectsByType(type, map, layerName) {
+    return _
+      .chain(map.objects[layerName])
+      .filter(item => item.properties.type === type)
+      .map(item => {
+        item.y -= map.tileHeight
+        return item
+      })
+      .value()
   }
 }
