@@ -10,12 +10,17 @@ export default class extends Phaser.State {
     this.map = this.game.add.tilemap('map')
     this.map.addTilesetImage('rttr', 'tiles')
 
-    this.backgroundLayer = this.map.createLayer('background')
-    // this.blockedLayer = this.map.createLayer('blockedLayer')
-    // this.map.setCollisionBetween(1, 200000, true, 'blockedLayer', true)
-    this.backgroundLayer.resizeWorld()
+    this.background = this.map.createLayer('background')
+    this.background.alpha = 0.5
 
     this.floor = this.map.createLayer('floor')
+    this.barricades = this.map.createLayer('barricades')
+    this.police = this.map.createLayer('police')
+    this.beers = this.map.createLayer('beers')
+    // this.blockedLayer = this.map.createLayer('blockedLayer')
+    // this.map.setCollisionBetween(1, 200000, true, 'blockedLayer', true)
+    this.background.resizeWorld()
+
     this.map.setCollisionBetween(1, 200000, true, 'floor', true)
 
     // add punky background music :)
@@ -29,7 +34,7 @@ export default class extends Phaser.State {
     })
 
     // add player
-    this.player = new Player({ game: this.game, x: 100, y: 100, asset: 'player' })
+    this.player = new Player({ game: this.game, x: 50, y: 200, asset: 'player' })
     setTimeout(() => {
       this.player.enable()
       this.bgTrack.play()
@@ -44,6 +49,16 @@ export default class extends Phaser.State {
     if (this.keys.space.isDown) {
       this.player.jump()
     }
+  }
+
+  createBeers() {
+    this.beers = this.game.add.group()
+    this.beers.enableBody = true
+    let result = this.findObjectsByType('beer', this.map, 'objectsLayer')
+
+    result.forEach((element) => {
+      this.createFromTiledObject(element, this.beers)
+    })
   }
 
   render () {
