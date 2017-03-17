@@ -49,10 +49,14 @@ module.exports = {
       { test: /p2\.js/, use: ['expose-loader?p2'] },
       {
         test: /\.js$/,
-        use: ['eslint-loader'],
+        loader: 'eslint-loader',
         include: projectRoot,
         exclude: /node_modules/,
-        enforce: 'pre'
+        enforce: 'pre',
+        options: {
+		  failOnWarning: false,
+		  failOnError: true
+		}
       }
     ]
   },
@@ -61,10 +65,6 @@ module.exports = {
     net: 'empty',
     tls: 'empty'
   },
-  /*eslint: {
-    failOnWarning: false,
-    failOnError: true
-  },*/
   resolve: {
     alias: {
       'phaser': phaser,

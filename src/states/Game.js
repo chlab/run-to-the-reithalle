@@ -1,4 +1,3 @@
-/* globals __DEV__ */
 import Phaser from 'phaser'
 import Player from '../sprites/Player'
 
@@ -8,7 +7,7 @@ export default class extends Phaser.State {
 
   create () {
     const bannerText = 'Run to the Reithalle'
-    let banner = this.add.text(this.world.centerX, this.game.height - 80, bannerText)
+    let banner = this.add.text(this.world.centerX, 80, bannerText)
     banner.font = 'Bangers'
     banner.padding.set(10, 16)
     banner.fontSize = 40

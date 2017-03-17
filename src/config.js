@@ -3,6 +3,6 @@ export default {
   // gameHeight: 400,
   localStorageName: 'run-to-the-reithalle',
   player: {
-  	speed: 450
+    speed: 450
   }
 }
