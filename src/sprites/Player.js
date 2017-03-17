@@ -6,6 +6,8 @@ export default class extends Phaser.Sprite {
     this.anchor.setTo(0.5)
     this.game.add.existing(this)
     this.animations.add('walk')
+
+    this.jumpSound = this.game.add.audio('jump')
   }
 
   /**
@@ -26,6 +28,7 @@ export default class extends Phaser.Sprite {
    */
   jump() {
     if (this.body.blocked.down) {
+      this.jumpSound.play()
       this.body.velocity.y -= 900
     }
   }

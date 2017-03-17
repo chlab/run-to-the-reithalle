@@ -21,6 +21,7 @@ export default class extends Phaser.State {
 
     // audio
     this.load.audio('bgTrack', './assets/audio/background/dirty-punk-loop.wav')
+    this.load.audio('jump', './assets/audio/effects/bodyimpact_jack_01.wav')
   }
 
   create () {
