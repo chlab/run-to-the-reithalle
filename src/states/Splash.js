@@ -10,10 +10,10 @@ export default class extends Phaser.State {
     this.loaderBar = this.add.sprite(this.game.world.centerX, this.game.world.centerY, 'loaderBar')
     centerGameObjects([this.loaderBg, this.loaderBar])
 
-    let banner = this.add.text(this.world.centerX, 80, config.title.toUpperCase())
+    let banner = this.add.text(this.world.centerX, 100, config.title.toUpperCase())
     banner.font = 'Maven Pro'
     banner.padding.set(10, 16)
-    banner.fontSize = 40
+    banner.fontSize = 50
     banner.fill = '#000000'
     banner.smoothed = false
     banner.anchor.setTo(0.5)
@@ -26,8 +26,8 @@ export default class extends Phaser.State {
     this.load.spritesheet('player', './assets/sprites/punk_run.png', 256, 256, 8)
 
     // map
-    this.load.tilemap('map', './assets/tilemaps/demo.json', null, Phaser.Tilemap.TILED_JSON)
-    this.load.image('tiles', './assets/sprites/tiles_spritesheet.png')
+    this.load.tilemap('map', './assets/tilemaps/level1.json', null, Phaser.Tilemap.TILED_JSON)
+    this.load.image('tiles', './assets/sprites/rttr.png')
 
     // audio
     this.load.audio('bgTrack', './assets/audio/background/dirty-punk-loop.wav')
