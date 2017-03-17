@@ -13,7 +13,7 @@ export default class extends Phaser.State {
     //
     // load your assets
     //
-    this.load.spritesheet('punk', './assets/sprites/punk_run.png', 256, 256, 8)
+    this.load.spritesheet('player', './assets/sprites/punk_run.png', 256, 256, 8)
   }
 
   create () {
