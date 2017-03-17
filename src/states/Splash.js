@@ -18,6 +18,9 @@ export default class extends Phaser.State {
     // map
     this.load.tilemap('map', './assets/tilemaps/demo.json', null, Phaser.Tilemap.TILED_JSON)
     this.load.image('tiles', './assets/sprites/tiles_spritesheet.png')
+
+    // audio
+    this.load.audio('bgTrack', './assets/audio/background/dirty-punk-loop.wav')
   }
 
   create () {

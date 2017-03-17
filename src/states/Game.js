@@ -15,6 +15,11 @@ export default class extends Phaser.State {
     this.map.setCollisionBetween(1, 200000, true, 'blockedLayer', true)
     this.backgroundLayer.resizeWorld()
 
+    // add punky background music :)
+    this.bgTrack = this.game.add.audio('bgTrack')
+    this.bgTrack.loop = true
+    this.bgTrack.play()
+
     // define game keys
     this.keys = this.game.input.keyboard.addKeys({
       space: Phaser.KeyCode.SPACEBAR,
