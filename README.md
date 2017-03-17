@@ -1,5 +1,5 @@
 # Run to the Reithalle
-*We don't have a tagline. Yet.*
+*Run and jump for your Reit*
 
 ## Setup
 
