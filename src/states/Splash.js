@@ -1,25 +1,27 @@
 import Phaser from 'phaser'
-import { centerGameObjects } from '../utils'
 import config from '../config'
+import Text from '../elements/Text'
 
 export default class extends Phaser.State {
   init () {}
 
   preload () {
-    this.loaderBg = this.add.sprite(this.game.world.centerX, this.game.world.centerY, 'loaderBg')
-    this.loaderBar = this.add.sprite(this.game.world.centerX, this.game.world.centerY, 'loaderBar')
-    centerGameObjects([this.loaderBg, this.loaderBar])
+    let banner = new Text(config.title, {
+      state: this,
+      x: this.world.centerX,
+      y: 200
+    })
 
-    let banner = this.add.text(this.world.centerX, 100, config.title.toUpperCase())
-    banner.font = 'Maven Pro'
-    banner.padding.set(10, 16)
-    banner.fontSize = 50
-    banner.fill = '#000000'
-    banner.smoothed = false
-    banner.anchor.setTo(0.5)
+    let loading = new Text('loading', {
+      state: this,
+      x: this.world.centerX,
+      y: 250,
+      size: 40
+    })
+
     this.add.text(banner)
+    this.add.text(loading)
 
-    this.load.setPreloadSprite(this.loaderBar)
     //
     // load your assets
     //
