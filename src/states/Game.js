@@ -36,10 +36,8 @@ export default class extends Phaser.State {
 
     // add player
     this.player = new Player({ game: this.game, x: 50, y: 330, asset: 'player' })
-    setTimeout(() => {
-      this.player.enable()
-      this.bgTrack.play()
-    }, 1000)
+    this.player.enable()
+    this.bgTrack.play()
     this.game.camera.follow(this.player)
 
     // add beers
