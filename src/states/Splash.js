@@ -38,6 +38,6 @@ export default class extends Phaser.State {
 
   create () {
     this.game.physics.startSystem(Phaser.Physics.ARCADE)
-    this.state.start('Game')
+    this.state.start('Intro')
   }
 }
