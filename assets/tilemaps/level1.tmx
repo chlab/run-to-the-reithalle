@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="100" height="15" tilewidth="32" tileheight="32" nextobjectid="46">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="100" height="15" tilewidth="32" tileheight="32" nextobjectid="56">
  <tileset firstgid="1" name="rttr" tilewidth="32" tileheight="32" tilecount="512" columns="16">
   <image source="../sprites/rttr.png" width="512" height="1024"/>
  </tileset>
- <tileset firstgid="513" name="enemies" tilewidth="60" tileheight="50" margin="5" tilecount="160" columns="8">
-  <image source="../sprites/rttr.png" width="512" height="1024"/>
+ <tileset firstgid="513" name="police" tilewidth="60" tileheight="60" tilecount="1" columns="1">
+  <image source="../images/police.png" width="60" height="60"/>
  </tileset>
- <tileset firstgid="673" name="collectables" tilewidth="32" tileheight="72" margin="25" tilecount="195" columns="15">
-  <image source="../sprites/rttr.png" width="512" height="1024"/>
+ <tileset firstgid="514" name="anker" tilewidth="80" tileheight="80" tilecount="1" columns="1">
+  <image source="../images/anker.png" width="80" height="80"/>
  </tileset>
  <layer name="background" width="100" height="15" opacity="0.32">
   <data encoding="csv">
@@ -40,19 +40,16 @@
   <object id="45" name="f1" type="floor" gid="53" x="2627.27" y="388.754" width="574.388" height="20.6905" rotation="0.150826"/>
  </objectgroup>
  <objectgroup name="collectables">
-  <object id="28" name="b4" type="beer" gid="688" x="518.179" y="428.959" width="32" height="72"/>
-  <object id="29" name="b3" type="beer" gid="688" x="741.266" y="355.28" width="32" height="72"/>
-  <object id="30" name="b2" type="beer" gid="688" x="1070.78" y="367.56" width="32" height="72"/>
-  <object id="31" name="b1" type="beer" gid="688" x="1148.55" y="357.326" width="32" height="72"/>
+  <object id="51" name="b5" type="beer" gid="514" x="559.673" y="383.84" width="80" height="80"/>
+  <object id="52" name="b4" type="beer" gid="514" x="782.759" y="379.746" width="80" height="80"/>
+  <object id="53" name="b3" type="beer" gid="514" x="1120.46" y="392.026" width="80" height="80"/>
+  <object id="54" name="b2" type="beer" gid="514" x="1495" y="369.513" width="80" height="80"/>
+  <object id="55" name="b1" type="beer" gid="514" x="1967.78" y="310.16" width="80" height="80"/>
  </objectgroup>
  <objectgroup name="enemies">
-  <object id="21" name="p1" type="police" gid="513" x="139.965" y="434.317" width="60" height="50"/>
-  <object id="22" name="p6" type="police" gid="513" x="428.73" y="430.516" width="60" height="50"/>
-  <object id="23" name="p5" type="police" gid="513" x="589.338" y="431.491" width="60" height="50"/>
-  <object id="24" name="p4" type="police" gid="513" x="726.166" y="430.419" width="60" height="50"/>
-  <object id="25" name="p3" type="police" gid="513" x="621.301" y="435.904" width="38.7948" height="32.329"/>
-  <object id="26" name="p2" type="police" gid="513" x="757.158" y="434.013" width="38.7948" height="32.329"/>
-  <object id="27" name="p1" type="police" gid="513" x="268.316" y="434.317" width="60" height="50"/>
+  <object id="46" name="p3" type="police" gid="513" x="217.646" y="433.193" width="60" height="60"/>
+  <object id="47" name="p2" type="police" gid="513" x="442.779" y="431.146" width="60" height="60"/>
+  <object id="48" name="p1" type="police" gid="513" x="667.912" y="435.239" width="60" height="60"/>
  </objectgroup>
  <imagelayer name="Bildebene 1"/>
 </map>
