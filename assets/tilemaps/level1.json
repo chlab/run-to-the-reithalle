@@ -70,7 +70,7 @@
         {
          "draworder":"topdown",
          "height":15,
-         "name":"police",
+         "name":"enemies",
          "objects":[
                 {
                  "gid":521,
@@ -78,10 +78,10 @@
                  "id":21,
                  "name":"p1",
                  "rotation":0,
-                 "type":"",
+                 "type":"police",
                  "visible":true,
                  "width":60,
-                 "x":111.311762986064,
+                 "x":139.965058115004,
                  "y":434.316830718254
                 }, 
                 {
@@ -90,11 +90,11 @@
                  "id":22,
                  "name":"p6",
                  "rotation":0,
-                 "type":"",
+                 "type":"police",
                  "visible":true,
                  "width":60,
-                 "x":353.003605886366,
-                 "y":428.469447422279
+                 "x":428.730171584278,
+                 "y":430.51611136006
                 }, 
                 {
                  "gid":521,
@@ -102,11 +102,11 @@
                  "id":23,
                  "name":"p5",
                  "rotation":0,
-                 "type":"",
+                 "type":"police",
                  "visible":true,
                  "width":60,
-                 "x":517.70490205633,
-                 "y":429.444011304941
+                 "x":589.338139878679,
+                 "y":431.490675242722
                 }, 
                 {
                  "gid":521,
@@ -114,10 +114,10 @@
                  "id":24,
                  "name":"p4",
                  "rotation":0,
-                 "type":"",
+                 "type":"police",
                  "visible":true,
                  "width":60,
-                 "x":687.279017639606,
+                 "x":726.165632457453,
                  "y":430.418575187603
                 }, 
                 {
@@ -126,10 +126,10 @@
                  "id":25,
                  "name":"p3",
                  "rotation":0,
-                 "type":"",
+                 "type":"police",
                  "visible":true,
                  "width":60,
-                 "x":824.69252509502,
+                 "x":961.819008926375,
                  "y":434.316830718254
                 }, 
                 {
@@ -138,10 +138,10 @@
                  "id":26,
                  "name":"p2",
                  "rotation":0,
-                 "type":"",
+                 "type":"police",
                  "visible":true,
                  "width":60,
-                 "x":1022.52899327551,
+                 "x":1171.93546073355,
                  "y":431.393139070266
                 }, 
                 {
@@ -150,10 +150,10 @@
                  "id":27,
                  "name":"p1",
                  "rotation":0,
-                 "type":"",
+                 "type":"police",
                  "visible":true,
                  "width":60,
-                 "x":225.335737257577,
+                 "x":268.315679950987,
                  "y":434.316830718254
                 }],
          "opacity":1,
@@ -229,6 +229,19 @@
          "tilecount":160,
          "tileheight":50,
          "tilewidth":60
+        }, 
+        {
+         "columns":15,
+         "firstgid":681,
+         "image":"..\/sprites\/rttr.png",
+         "imageheight":1024,
+         "imagewidth":512,
+         "margin":10,
+         "name":"rttr",
+         "spacing":0,
+         "tilecount":210,
+         "tileheight":70,
+         "tilewidth":32
         }],
  "tilewidth":32,
  "version":1,
