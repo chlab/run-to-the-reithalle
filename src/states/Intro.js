@@ -1,10 +1,9 @@
 import Phaser from 'phaser'
-import { isTouchDevice } from '@/utils'
 import Text from '@/elements/Text'
 import Input from '@/extensions/Input'
 
 export default class extends Phaser.State {
-  create() {
+  preload() {
     this.map = this.game.add.tilemap('map')
     this.map.addTilesetImage('rttr', 'tiles')
 
@@ -15,20 +14,16 @@ export default class extends Phaser.State {
     this.background.resizeWorld()
 
     // show hint
-    let howToJump = isTouchDevice()
+    let howToJump = this.game.device.touch
       ? 'Tap your screen'
       : 'Press space'
 
-    let loading = new Text(`${howToJump} to start`, {
-      state: this,
-      x: this.world.centerX,
-      y: 250,
-      size: 40
+    /* eslint-disable no-new */
+    new Text(`${howToJump} to start`, {
+      state: this
     })
 
     this.input = new Input({ game: this.game })
-
-    this.add.text(loading)
   }
 
   update() {

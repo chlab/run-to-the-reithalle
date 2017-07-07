@@ -6,21 +6,20 @@ export default class extends Phaser.State {
   init () {}
 
   preload () {
-    let banner = new Text(config.title, {
+    /* eslint-disable no-new */
+    new Text(config.title, {
       state: this,
       x: this.world.centerX,
       y: 200
     })
 
-    let loading = new Text('loading', {
+    /* eslint-disable no-new */
+    new Text('loading', {
       state: this,
       x: this.world.centerX,
       y: 250,
       size: 40
     })
-
-    this.add.text(banner)
-    this.add.text(loading)
 
     //
     // load your assets
