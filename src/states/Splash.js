@@ -1,25 +1,19 @@
 import Phaser from 'phaser'
-import config from '../config'
 import Text from '../elements/Text'
 
 export default class extends Phaser.State {
   init () {}
 
   preload () {
-    /* eslint-disable no-new */
-    new Text(config.title, {
+    let loading = new Text('loading', {
       state: this,
       x: this.world.centerX,
-      y: 200
-    })
-
-    /* eslint-disable no-new */
-    new Text('loading', {
-      state: this,
-      x: this.world.centerX,
-      y: 250,
+      y: 650,
       size: 40
     })
+
+    this.add.text(loading)
+    this.load.image('title-image', './assets/images/title.png')
 
     //
     // load your assets

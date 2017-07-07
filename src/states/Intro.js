@@ -20,8 +20,13 @@ export default class extends Phaser.State {
 
     /* eslint-disable no-new */
     new Text(`${howToJump} to start`, {
+      x: this.game.width / 2,
+      y: this.game.height * 0.9,
       state: this
     })
+
+    let titleImage = this.add.image(this.game.width / 2, this.game.height / 2, 'title-image')
+    titleImage.anchor.setTo(0.5)
 
     this.input = new Input({ game: this.game })
   }
