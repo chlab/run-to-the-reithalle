@@ -9,6 +9,8 @@ import GameState from './states/Game'
 
 import config from './config'
 
+import '@/extensions/CollisionDetection'
+
 class Game extends Phaser.Game {
   constructor () {
     const docElement = document.documentElement
